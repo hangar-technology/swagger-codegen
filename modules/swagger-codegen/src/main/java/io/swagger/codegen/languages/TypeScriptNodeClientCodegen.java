@@ -27,6 +27,8 @@ public class TypeScriptNodeClientCodegen extends AbstractTypeScriptClientCodegen
     public TypeScriptNodeClientCodegen() {
         super();
 
+        typeMapping.put("file", "Buffer");
+
         // clear import mapping (from default generator) as TS does not use it
         // at the moment
         importMapping.clear();
@@ -90,6 +92,11 @@ public class TypeScriptNodeClientCodegen extends AbstractTypeScriptClientCodegen
     @Override
     public String getHelp() {
         return "Generates a TypeScript nodejs client library.";
+    }
+
+    @Override
+    public boolean isDataTypeFile(final String dataType) {
+        return dataType != null && dataType.equals("Buffer");
     }
 
 

@@ -1,3 +1,12 @@
+## NOTICE: This only exists until v2.2.2 of swagger-codegen is released
+
+This fork applies a few PRs related to typescript code generation that haven't yet been released in swagger-codegen proper.
+
+Currently we have taken 
+* #4203 // fixes error name duplication
+* #4205 // allows for file responses
+* #4157 // noimplicitany fixes
+
 # Swagger Code Generator
 
 [![Build Status](https://img.shields.io/travis/swagger-api/swagger-codegen.svg?label=Petstore%20Integration%20Test)](https://travis-ci.org/swagger-api/swagger-codegen)
